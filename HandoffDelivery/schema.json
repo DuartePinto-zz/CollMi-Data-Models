@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$schemaVersion": "0.0.1",
+  "$id": "https://smart-data-models.github.io/XXXSubjectXXX/XXXDataModelXXX/schema.json",
+  "title": "Smart Data models -XXXdataModelXXX schema",
+  "modelTags": "",
+  "description": "This entity models the transactions of a given package between multiple entities.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "deliveringEntity": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Entity delivering a given package."
+        },
+        "deliverer": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Concrete individual delivering a given package."
+        },
+        "delivererSignature": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Hash of the certified signature of the deliverer."
+        },
+        "ofWaybill": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. Reference to a Waybill entity."
+        }
+      }
+    }
+  ],
+  "required": [
+	"id",
+    "type",
+	"deliveringEntity",
+    "deliverer",
+	"delivererSignature",
+	],
+}

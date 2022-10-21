@@ -1,0 +1,28 @@
+{
+    "id": "urn:ngsi-ld:HANDOFFRECEIVAL:HandoffReceival-Package-001",
+    "type": "HANDOFFRECEIVAL",
+    "receivingEntity": {
+        "type": "Property",
+        "value": "Logimade"
+    },
+
+    "receiver": {
+        "type": "Property",
+        "value": "Antonio Fagundes"
+    },	
+
+    "receiverSignature": {
+        "type": "Property",
+        "value": "-----BEGIN CERTIFICATE-----MIIDODCCAvagAwIBAgIERqplETALBgcqhkjOOAQDBQAwfzELMAkGA1UE... ...Cgfs2kXj/IQCFDC5GT5IrLTIFxAyPUo1tJo2DPkK-----END CERTIFICATE----- "
+    },	
+	"ofWaybill": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Waybill:Waybill-Package-001"
+    },
+	
+	"@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://i4trust.arditi.pt/ld/HandoffReceival"
+    ]
+ 
+}

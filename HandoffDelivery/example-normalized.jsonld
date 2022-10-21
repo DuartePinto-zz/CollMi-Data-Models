@@ -1,0 +1,26 @@
+{
+    "id": "urn:ngsi-ld:HANDOFFDELIVERY:HandoffDelivery-Package-001",
+    "type": "HANDOFFDELIVERY",
+    "deliveringEntity": {
+        "type": "Property",
+        "value": "Logislink"
+    },
+    "deliverer": {
+        "type": "Property",
+        "value": "Serafim Meireles"
+    },
+    "delivererSignature": {
+        "type": "Property",
+        "value": "-----BEGIN CERTIFICATE-----MIIDODCCAvagAwIBAgIERqplETALBgcqhkjOOAQDBQAwfzELMAkGA1UE... ...Cgfs2kXj/IQCFDC5GT5IrLTIFxAyPUo1tJo2DPkK-----END CERTIFICATE----- "
+    },
+	"ofWaybill": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Waybill:Waybill-Package-001"
+    },
+	
+	"@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://i4trust.arditi.pt/ld/HandoffDelivery"
+    ]
+ 
+}
