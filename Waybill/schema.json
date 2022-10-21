@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/schema",
   "$schemaVersion": "0.0.1",
-  "$id": "https://smart-data-models.github.io/XXXSubjectXXX/XXXDataModelXXX/schema.json",
-  "title": "Smart Data models -XXXdataModelXXX schema",
+  "$id": "https://github.com/DuartePinto-zz/CollMi-Data-Models/edit/main/Waybill/schema.json",
+  "title": "Data models WAYBILL schema",
   "modelTags": "",
   "description": "This entity models the transportation aspects of a package.",
   "type": "object",
