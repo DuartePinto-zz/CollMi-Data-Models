@@ -1,0 +1,62 @@
+{
+    "id": "urn:ngsi-ld:WAYBILL:Waybill-Package-001",
+    "type": "WAYBILL",
+	"supplyType": "Outward",
+	"subSupplyType": "Supply",
+	"subSupplyDesc": "Office Materials supply",
+	"transactionType": "Combination",
+	"docType": "Invoice",
+	"docNo": 94647944,
+	"docDate": "2022-02-28T10:18:16Z",
+	"fromGstin": "224443512",
+	"fromTrdName": "Loja do Chá",
+	"fromTelephone": "+351291221309",
+	"fromClientNumber": 554,
+	"fromAddr1": "Rua do Sabão",
+	"fromAddr2": "nº. 33-35",
+	"fromPlace": "Funchal, Portugal",
+	"fromPincode": "9000-056",
+	"fromStateCode": 0,
+	"actFromStateCode": 0,
+    "toGstin":"25663512",
+	"toTrdName": "Serafim Meireles",
+	"toTelephone": "+351 919155743",
+	"toClientNumber": 0,
+	"toAddr1": "Rua da Tia Joaquina",
+	"toAddr2": "nº27 R/C Direito",
+	"toPlace": "Machico, Portugal",
+	"toPincode": "9200-408",
+	"toStateCode": 0,
+	"actToStateCode": 0,
+	"sgstValue": 0,
+	"cgstValue": 0,	
+	"product":[{
+			"productName": "Office Supplies",	
+            "productDesc": "Office supplies of a kind classified as stationery other than pins, clips, and writing",	
+            "hsnCode": 39261019,	
+            "quantity": 4,	
+            "qtyUnit": "BOX",	
+            "cgstRate": 0,	
+            "sgstRate": 0,	
+            "igstRate": 0,	
+            "cessRate": 0	
+		}],		
+	"accessEntities":[{
+			"entityName": "Loja do Chá",	
+		},{
+			"entityName": "LogiMade",	
+		}],
+	"handoffDelivery":[{
+			"ofhandoffDelivery": "urn:ngsi-ld:HANDOFFDELIVERY:HandoffDelivery-Package-001",		
+		}],
+	"handoffRecieval":[{
+			"ofhandoffRecieval": "urn:ngsi-ld:HANDOFFRECIEVAL:HandoffDelivery-Package-001",	
+		}],	
+	
+		
+	"@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://i4trust.arditi.pt/ld/waybill"
+    ]
+ 
+}

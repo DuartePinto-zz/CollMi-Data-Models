@@ -1,0 +1,283 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$schemaVersion": "0.0.1",
+  "$id": "https://smart-data-models.github.io/XXXSubjectXXX/XXXDataModelXXX/schema.json",
+  "title": "Smart Data models -XXXdataModelXXX schema",
+  "modelTags": "",
+  "description": "This entity models the transportation aspects of a package.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "supplyType": {
+          "type": "string",
+          "enum": [
+            "Inwards",
+            "Outward"
+          ],
+          "description": "Property. Model:'https://schema.org/Text. Kind of transportation taking place (Inwards if recipient / Outwards if suplier)."
+        },
+        "subSupplyType": {
+          "type": "string",
+          "enum": [
+            "Supply",
+            "Export",
+            "Job work",
+            "SKD/CKD/LOTS",
+            "For own use",
+            "Line sales",
+            "Recipient not known",
+            "Exibitions or Fairs",
+            "Other",
+            "Job work return",
+            "Sales return"
+          ],
+          "description": "Property. Model:'https://schema.org/Text'. Specific type of the objective of the consignment being transported."
+        },
+        "subSupplyDesc": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Description of the objective of the consignment."
+        },
+        "transactionType": {
+          "type": "string",
+          "enum": [
+            "Regular",
+            "Ship to",
+            "Dispatch from",
+            "Combination"
+          ],
+          "description": "Property. Model:'https://schema.org/Text. (Type of the transportation. Regular if Dispatch-from and Ship-to details are not provided. Ship to if only Ship-to details are provided. Dispatch from, if only Dispatch-from details are provided. Combination, if both Dispatch-from and Ship-to details are provided"
+        },
+        "docType": {
+          "type": "string",
+          "enum": [
+            "Invoice",
+            "Bill",
+            "Challan",
+            "Bill of entry",
+            "Credit note",
+            "Other"
+          ],
+          "description": "Property. Model:'https://schema.org/Text'. Specific kind of document that the transporter has for the consignment."
+        },
+        "docNo": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Number of the document."
+        },
+        "docDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. Date of the emission of the document."
+        },
+        "fromGstin": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Goods and services tax identification number of the supplier of the consignment."
+        },
+        "fromTrdName": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Name of the supplier of the consignment."
+        },
+        "fromTelephone": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Telephone number of the supplier of the consignment."
+        },
+        "fromClientNumber": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Text'. Client number of the supplier of the consignment."
+        },
+        "fromAddr1": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Address of the supplier of the consignment (street,building)."
+        },
+        "fromAddr2": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Address of the supplier of the consignment (floor,door number)."
+        },
+        "fromPlace": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Location of the address of the supplier of the consignment."
+        },
+        "fromPincode": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Postal Index Number code of the address of the supplier of the consignment."
+        },
+        "fromStateCode": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. State code of the address of the supplier of the consignment."
+        },
+        "actFromStateCode": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Actual state code of the address of the supplier of the consignment."
+        },
+        "toGstin": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Goods and services tax identification number of the reciever of the consignment."
+        },
+        "toTrdName": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Name of the reciever of the consignment."
+        },
+        "toTelephone": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Telephone number of the reciever of the consignment."
+        },
+        "toClientNumber": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Client number of the reciever of the consignment."
+        },
+        "toAddr1": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Address of the reciever of the consignment (street,building)."
+        },
+        "toAddr2": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Address of the reciever of the consignment (floor,door number)."
+        },
+        "toPlace": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Location of the address of the reciever of the consignment."
+        },
+        "toPincode": {
+          "type": "string",
+          "description": "Property. Model:https://schema.org/Text'. Postal Index Number code of the reciever of the supplier of the consignment."
+        },
+        "toStateCode": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. State code of the address of the reciever of the consignment."
+        },
+        "actToStateCode": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Actual state code of the address of the reciever of the consignment."
+        },
+        "sgstValue": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. State Goods and Services Tax rate of the consignment."
+        },
+        "cgstValue": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Central Goods and Services Tax rate of the consignment."
+        },
+        "product": {
+          "type": "object",
+          "description": "Property. Model:'https://schema.org/Text. List of products in the consignment.",
+          "properties": {
+            "productName": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. Name of the product."
+            },
+            "productDesc": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. Description of the product."
+            },
+            "hsnCode": {
+              "type": "number",
+              "description": "Property. Model:'https://schema.org/Number'. Harmonized Commodity Description and Coding System code."
+            },
+            "quantity": {
+              "type": "number",
+              "description": "Property. Model:'https://schema.org/Number'. Quantity of the product."
+            },
+            "qtyUnit": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. Unit used to measure the quantity. (Units, Kilograms, ...)"
+            },
+            "taxableAmount": {
+              "type": "number",
+              "description": "Property. Model:'https://schema.org/Number'. Amount in respect of a taxable transaction on which VAT is chargeable."
+            },
+            "sgstRate": {
+              "type": "number",
+              "description": "Property. Model:'https://schema.org/Number'. State Goods and Services Tax rate of the product."
+            },
+            "cgstRate": {
+              "type": "number",
+              "description": "Property. Model:'https://schema.org/Number'. Central Goods and Services Tax rate of the product."
+            },
+            "igstRate": {
+              "type": "number",
+              "description": "Property. Model:'https://schema.org/Number'. Integrated Goods and Services Tax rate of the product."
+            },
+            "cessRate": {
+              "type": "number",
+              "description": "Property. Model:'https://schema.org/Number'. Cess Tax rate of the product."
+            }
+          }
+        },
+		"accessEntities": {
+          "type": "object",
+          "description": "Property. Model:'https://schema.org/Text. List of entities with access to the waybill (Logistic Operator / Retailer / Retailer Proxy.",
+          "properties": {
+            "entityName": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. Name of the entity with access to this Waybill."
+            },
+		  }
+		},
+		"handoffDelivery": {
+          "type": "object",
+          "description": "Property. Model:'https://schema.org/Text. List of handoffs of the package to transporters or client.",
+          "properties": {
+            "ofHandoffDelivery": {
+			  "anyOf": [
+				{
+				  "type": "string",
+				  "minLength": 1,
+				  "maxLength": 256,
+				  "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+				  "description": "Property. Identifier format of any NGSI entity"
+				},
+				{
+				  "type": "string",
+				  "format": "uri",
+				  "description": "Property. Identifier format of any NGSI entity"
+				}
+			  ],
+			  "description": "Relationship. Reference to a HandoffDelivery entity."
+			}
+		  }
+		},
+		"handoffRecieval": {
+          "type": "object",
+          "description": "Property. Model:'https://schema.org/Text. List of handoffs of the package recieved by transporters or client.",
+          "properties": {
+            "ofHandoffRecieval": {
+			  "anyOf": [
+				{
+				  "type": "string",
+				  "minLength": 1,
+				  "maxLength": 256,
+				  "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+				  "description": "Property. Identifier format of any NGSI entity"
+				},
+				{
+				  "type": "string",
+				  "format": "uri",
+				  "description": "Property. Identifier format of any NGSI entity"
+				}
+			  ],
+			  "description": "Relationship. Reference to a HandoffRecieval entity."
+			}
+		  }
+		}
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type",
+    "fromTrdName",
+    "fromAddr1",
+    "fromGstin",
+    "toTrdName",
+    "toAddr1",
+    "toGstin"
+  ],
+  "derivedFrom": "",
+  "license": ""
+}

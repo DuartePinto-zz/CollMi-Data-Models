@@ -1,0 +1,193 @@
+{
+    "id": "urn:ngsi-ld:WAYBILL:Waybill-Package-001",
+    "type": "WAYBILL",
+	"supplyType": {
+        "type": "Property",
+        "value": "Outward"
+    },
+	"subSupplyType": {
+        "type": "Property",
+        "value": "Supply"
+    },
+	"subSupplyDesc": {
+        "type": "Property",
+        "value": "Office Materials supply"
+    },
+	"transactionType": {
+        "type": "Property",
+        "value": "Combination"
+    },
+	"docType": {
+        "type": "Property",
+        "value": "Invoice"
+    },
+	"docNo": {
+        "type": "Property",
+        "value": "94647944"
+    },
+	"docDate": {
+        "type": "Property",
+        "value": "2022-02-28T10:18:16Z"
+    },
+	"fromGstin": {
+        "type": "Property",
+        "value": "224443512"
+    },
+	"fromTrdName": {
+        "type": "Property",
+        "value": "Loja do Chá"
+    },
+	"fromTelephone": {
+        "type": "Property",
+        "value": "+351291221309"
+    },
+	"fromClientNumber": {
+        "type": "Property",
+        "value": "554"
+    },
+	"fromAddr1": {
+        "type": "Property",
+        "value": "Rua do Sabão"
+    },
+	"fromAddr2": {
+        "type": "Property",
+        "value": "nº. 33-35"
+    },
+	"fromPlace": {
+        "type": "Property",
+        "value": "Funchal, Portugal"
+    },
+	"fromPincode": {
+        "type": "Property",
+        "value": "9000-056"
+    },
+	"fromStateCode": {
+        "type": "Property",
+        "value": 0
+    },
+	"actFromStateCode": {
+        "type": "Property",
+        "value": 0
+    },
+	"toTrdName": {
+        "type": "Property",
+        "value": "Serafim Meireles"
+    },
+	"toTelephone": {
+        "type": "Property",
+        "value": "+351 919155743"
+    },
+	"toClientNumber": {
+        "type": "Property",
+        "value": 0
+    },
+	"toAddr1": {
+        "type": "Property",
+        "value": "Rua da Tia Joaquina"
+    },
+	"toAddr2": {
+        "type": "Property",
+        "value": "nº27 R/C Direito"
+    },
+	"toPlace": {
+        "type": "Property",
+        "value": "Machico, Portugal"
+    },
+	"toPincode": {
+        "type": "Property",
+        "value": "9200-408"
+    },
+	"toStateCode": {
+        "type": "Property",
+        "value": 0
+    },
+	"actToStateCode": {
+        "type": "Property",
+        "value": 0
+    },
+	"sgstValue": {
+        "type": "Property",
+        "value": 0
+    },
+	"cgstValue": {
+        "type": "Property",
+        "value": 0
+    },	
+	"product": {
+        "type": "Property",
+        "value":[{
+			"productName": {
+				"type": "Property",
+				"value": "Office Supplies"
+			},	
+            "productDesc": {
+                "type": "Property",
+                "value": "Office supplies of a kind classified as stationery other than pins, clips, and writing"
+            },	
+            "hsnCode": {
+                "type": "Property",
+                "value": 39261019
+            },	
+            "quantity": {
+                "type": "Property",
+                "value": 4
+            },	
+            "qtyUnit": {
+                "type": "Property",
+                "value": "BOX"
+            },	
+            "cgstRate": {
+                "type": "Property",
+                "value":0
+            },	
+            "sgstRate": {
+                "type": "Property",
+                "value":0
+            },	
+            "igstRate": {
+                "type": "Property",
+                "value":0
+            },	
+            "cessRate": {
+                "type": "Property",
+                "value":0
+            }	
+		}]
+    },	
+	"accessEntities": {
+        "type": "Property",
+        "value":[{
+			"entityName": [{
+				"type": "Property",
+				"value": "Loja do Chá"	
+			},
+			{
+				"type": "Property",
+				"value":  "LogiMade"
+			}]
+        }]
+	},
+	"handoffDelivery": {
+        "type": "Property",
+        "value":[{
+			"ofhandoffDelivery": {
+				"type": "Relationship",
+				"value":  "urn:ngsi-ld:HANDOFFDELIVERY:HandoffDelivery-Package-001"	
+			}				
+		}]
+	},
+	"handoffRecieval": {
+        "type": "Property",
+        "value":[{
+			"handoffRecieval": {
+				"type": "Relationship",
+				"value":  "urn:ngsi-ld:HANDOFFRECIEVAL:HandoffDelivery-Package-001"
+			}				
+		}]
+	},	
+		
+	"@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ]
+ 
+}
